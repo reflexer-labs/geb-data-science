@@ -41,3 +41,17 @@ def fetch_rp(url):
     s = json.loads(r.content)['data']['systemState']['currentRedemptionPrice']['value']
 
     return float(s)
+
+def fetch_debt_ceiling(url):
+
+    query =  '''
+    query {
+        collateralType(id:"ETH-A") {
+        debtCeiling
+        }
+    }'''
+    r = requests.post(url, json = {'query':query})
+    s = json.loads(r.content)['data']['collateralType']['debtCeiling']
+
+    return float(s)
+
