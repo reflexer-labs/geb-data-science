@@ -76,3 +76,4 @@ webencodings==0.5.1
 websockets==8.1
 widgetsnbextension==3.5.1
 yarl==1.5.1
+web3==5.24.0
