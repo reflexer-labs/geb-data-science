@@ -1,0 +1,3 @@
+[console_scripts]
+fitter = fitter.main:main
+

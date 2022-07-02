@@ -1,0 +1,3 @@
+[console_scripts]
+browse = easydev.browser:main
+
