@@ -31,7 +31,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run controller monitoring notebook
-        run: jupyter nbconvert --to notebook --execute controller/Controller\ Monitoring.ipynb
+        run: echo 'Hello world!'
+        #run: jupyter nbconvert --to notebook --execute controller/Controller\ Monitoring.ipynb
         
       - name: Commit changes
       - uses: EndBug/add-and-commit@v9
