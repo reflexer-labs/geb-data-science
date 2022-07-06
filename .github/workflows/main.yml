@@ -37,6 +37,8 @@ jobs:
       - run: python -m ipykernel install --user --name=local-venv
 
       - name: Run controller monitoring notebook
+        env:
+          ETH_RPC_URL: ${{ secrets.ETH_RPC_URL }}
         #run: echo 'Hello world!'
         run: jupyter nbconvert --to notebook --execute controller/Controller\ Monitoring.ipynb
         
