@@ -30,8 +30,8 @@ jobs:
           requirement_files: requirements.txt  # this is optional
 
       - name: Run controller monitoring notebook
-        run: echo 'Hello world!'
-        #run: jupyter nbconvert --to notebook --execute controller/Controller\ Monitoring.ipynb
+        #run: echo 'Hello world!'
+        run: jupyter nbconvert --to notebook --execute controller/Controller\ Monitoring.ipynb
         
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
