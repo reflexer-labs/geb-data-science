@@ -31,6 +31,8 @@ jobs:
           
       - run: pip install -r requirements.txt
         if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+        
+      - run: python -m ipykernel install --user --name=local-venv
 
       - name: Run controller monitoring notebook
         #run: echo 'Hello world!'
