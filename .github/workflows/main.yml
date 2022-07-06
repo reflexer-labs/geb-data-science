@@ -28,6 +28,10 @@ jobs:
         id: cache-virtualenv
         with:
           requirement_files: requirements.txt  # this is optional
+          
+      - name: python requirements
+        run: pip install -r requirements.txt
+          if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
       - name: Run controller monitoring notebook
         #run: echo 'Hello world!'
