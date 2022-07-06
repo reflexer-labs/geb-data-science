@@ -10,25 +10,21 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   run:
     name: Controller monitoring notebook
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repo
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
  
       - name: Setup python
-      - uses: actions/setup-python@v4
+        uses: actions/setup-python@v4
         with:
           python-version-file: '.python-version' # Read python version from a file
           
       - name: Restore venv
-      - uses: syphar/restore-virtualenv@v1
+        uses: syphar/restore-virtualenv@v1
         id: cache-virtualenv
         with:
           requirement_files: requirements.txt  # this is optional
@@ -38,7 +34,7 @@ jobs:
         #run: jupyter nbconvert --to notebook --execute controller/Controller\ Monitoring.ipynb
         
       - name: Commit changes
-      - uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v9
         with:
           message: Show GitHub Actions logo
           committer_name: GitHub Actions
