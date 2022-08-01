@@ -1,4 +1,6 @@
 ## Setup and run
+Add `ETH_RPC_URL=<your RPC url>` to `env.sh`
+
 `source env.sh`
 
 `python -m venv venv`
