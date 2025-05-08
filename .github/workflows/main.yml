@@ -34,7 +34,7 @@ jobs:
         if: steps.cache-virtualenv.outputs.cache-hit != 'true'
         
 
-      - run: python -m ipykernel install --user --name=local-venv
+      - run: python -m ipykernel install --user --name=venv
 
       - name: Run controller monitoring notebook
         env:
